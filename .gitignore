@@ -7,7 +7,6 @@ build
 devel
 logs
 setup.bash
-src
 rosinstall/optional/custom
 .catkin_tools
 *.orig
