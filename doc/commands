@@ -1,0 +1,12 @@
+rostopic pub mySong std_msgs/Bool true 
+
+rostopic pub /sound std_msgs/UInt8MultiArray '{data:[70,102]}'
+
+rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}'
+
+rostopic pub set
+
+Beispiel: rostopic pub /turtle1/PositionCommand geometry_msgs/Pose2D "x: 0.0 
+eingeben und dann zweimal Tabulartor Taste drücken um Argumente zu erzeugen!
+
+

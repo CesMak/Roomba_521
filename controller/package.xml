@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>controller</name>
+  <version>0.0.0</version>
+  <description>The controller package</description>
+
+  <maintainer email="2f4yor@gmail.com">Markus Lamprecht</maintainer>
+
+
+  <license>TODO</license>
+
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>turtlesim</build_depend>
+ <build_depend>geometry_msgs</build_depend>
+<build_depend>std_msgs</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>turtlesim</run_depend>
+ <run_depend>geometry_msgs</run_depend>
+ <run_depend>std_msgs</run_depend>
+
+
+
+</package>

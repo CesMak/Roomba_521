@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- Node and arguments for the roomba 521-->
+  <arg name="desc" default="true"/>
+  <arg name="publish_tf" default="true"/>
+  <node name="r_driver" pkg="r_driver" type="r_driver" output="screen">
+    <param name="~loop_hz" value="30" />
+    <param name="~dev" value="/dev/ttyUSB0" />
+    <param name="~publish_tf" value="$(arg publish_tf)"/>
+    <param name="~create_1" value="false" />   <!-- TODO: create_1 noch ändern!-->
+  </node>
+
+<!-- Node and arguments for the Controller controller package muss in CMakelists.txt add executable enthalten!-->
+ <!-- <node name="controller" pkg="controller" type="controller" output="screen">
+  </node>
+-->
+
+<!-- Starting the xBOX kinect node -->
+  <!-- <include file="$(find openni_launch)/launch/openni.launch"/> -->
+
+</launch>
