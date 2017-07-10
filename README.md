@@ -10,6 +10,7 @@ This is a repository which contains the driver packages and some functionalities
 
 ```
 turtle install roomba_521
+turtle update_make
 ```
 
 3. Give rights to the USB:
@@ -39,7 +40,7 @@ roslaunch r_driver r_521.launch
 # Possible Commands:
 
 ```
-rostopic pub mySong std_msgs/Bool true  // sound somehow broken....
+rostopic pub mySong std_msgs/Bool true
 
 rostopic pub /sound std_msgs/UInt8MultiArray '{data:[70,102]}'
 
@@ -57,25 +58,23 @@ rostopic pub /power_led std_msgs/UInt8MultiArray "layout:
   data_offset: 0
 data: '[12,100]'"   [works]
 
+[...]
 
-
+[if controller node is started in r_521.launch - you can drive to a determined position:]
+rostopic pub /turtle1/PositionCommand geometry_msgs/Pose2D "x: 1.5 y: 0.0 theta: 10.0"
 ```
 
-## USB Connection:
+# Problems
+
+## USB Connection should look like:
  ![](https://github.com/CesMak/roomba_521/blob/master/doc/usb_connection_output.png    )
 
-
-## Problems
-
-# Does not connect:
-[under Ubuntu 16.04.2 - ROS KINETIC]
-(this problem occured in low battery mode....)
-
-ls -la /dev/ttyUSB*
-gives
-crw-rw---- 1 root dialout 188, 0 Jul 10 16:52 /dev/ttyUSB0
+`ls -la /dev/ttyUSB*` should give:
+ crw-rw---- 1 root dialout 188, 0 Jul 10 16:52 /dev/ttyUSB0
 
 
+## Errors:
+<pre>
 markus@markus:~/turtlebot1/src/turtlebot/roomba_521/r_driver/launch$ roslaunch r_521.launch
 ... logging to /home/markus/.ros/log/8bab9542-6174-11e7-bb0a-48d2244c225b/roslaunch-markus-26140.log
 Checking log directory for disk usage. This may take awhile.
@@ -84,7 +83,7 @@ Done checking log file disk usage. Usage is <1GB.
 
 started roslaunch server http://markus:40391/
 
- SUMMARY
+SUMMARY
 ========
 
 PARAMETERS
@@ -112,13 +111,14 @@ terminate called after throwing an instance of 'boost::exception_detail::clone_i
   what():  open: Permission denied
 [r_driver-2] process has died [pid 26175, exit code -6, cmd /home/markus/turtlebot1/devel/lib/r_driver/r_driver __name:=r_driver __log:=/home/markus/.ros/log/8bab9542-6174-11e7-bb0a-48d2244c225b/r_driver-2.log].
 log file: /home/markus/.ros/log/8bab9542-6174-11e7-bb0a-48d2244c225b/r_driver-2*.log
+</pre>
 
-#Solution:
+Solution:
 ```
 $ sudo usermod -a -G dialout $USER
 ```
 Log Out and log in for permission to take effect.
 
 
-# Yellow Light is flashing fast when charging:
+## Yellow Light is flashing fast when charging:
 put battery in and out again.
