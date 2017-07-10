@@ -12,9 +12,9 @@
   </node>
 
 <!-- Node and arguments for the Controller controller package muss in CMakelists.txt add executable enthalten!-->
- <!-- <node name="controller" pkg="controller" type="controller" output="screen">
+ <node name="controller" pkg="controller" type="controller" output="screen">
   </node>
--->
+
 
 <!-- Starting the xBOX kinect node -->
   <!-- <include file="$(find openni_launch)/launch/openni.launch"/> -->
