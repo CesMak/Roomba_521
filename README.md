@@ -36,7 +36,10 @@ roslaunch r_driver r_521.launch
 
 # Topics:
  ![](https://github.com/CesMak/roomba_521/blob/master/doc/topics.png)
- 
+
+# PD-Controller:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/pNLwUF0T-Nc/0.jpg)](https://www.youtube.com/watch?v=pNLwUF0T-Nc)
+
 # Possible Commands:
 
 ```
@@ -122,3 +125,9 @@ Log Out and log in for permission to take effect.
 
 ## Yellow Light is flashing fast when charging:
 put battery in and out again.
+
+# Some Messages:
+![](https://github.com/CesMak/roomba_521/blob/master/doc/bumper.png)
+![](https://github.com/CesMak/roomba_521/blob/master/doc/diagnostics.png)
+![](https://github.com/CesMak/roomba_521/blob/master/doc/clean_button.png)
+
