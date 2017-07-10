@@ -100,10 +100,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES roomba_521
-#  CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+ # INCLUDE_DIRS include
+  #LIBRARIES roomba_521
+  #CATKIN_DEPENDS roscpp rospy std_msgs
+ # DEPENDS system_lib
 )
 
 ###########
@@ -114,13 +114,13 @@ catkin_package(
 ## Your package locations should be listed before other locations
 # include_directories(include)
 include_directories(
-  ${catkin_INCLUDE_DIRS}
+ # ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
-# add_library(roomba_521
-#   src/${PROJECT_NAME}/roomba_521.cpp
-# )
+ #add_library(roomba_521
+ #  src/${PROJECT_NAME}/roomba_521.cpp
+ #)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
